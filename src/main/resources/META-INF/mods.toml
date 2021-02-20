@@ -1,0 +1,29 @@
+modLoader="javafml" #mandatory
+loaderVersion="[34,)" #mandatory (30 is current forge version)
+issueTrackerURL="https://github.com/Kashdeya/Tiny-Progressions/issues" #optional
+license = "ARR"
+[[mods]] #mandatory
+modId="xlfoodmod" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="XL Food Mod" #mandatory
+displayURL="https://www.curseforge.com/minecraft/mc-mods/tiny-progressions" #optional
+logoFile="" #optional
+credits="Thanks for this example mod goes to Java" #optional
+authors="OneLemonyBoi" #optional
+description='''
+A mod that adds more foods and crops to the game.
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.tp]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[34,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+# Here's another dependency
+[[dependencies.tp]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.4, 1.16.5]"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,7 @@
+{
+	"parent": "item/generated",
+	"textures":
+	{
+		"layer0": "xlfoodmod:block/lettuce_plant_stage7"
+	}
+}
