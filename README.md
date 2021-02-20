@@ -8,7 +8,7 @@
 
 ## Downloads
 
-Downloads can be found on [Curseforge](https://www.curseforge.com/minecraft/mc-mods/xl-food-mod-116+).
+Downloads can be found on [Curseforge](https://www.curseforge.com/minecraft/mc-mods/xl-food-mod-1-16).
 
 ## Issues
 
