@@ -8,11 +8,11 @@
 
 ## Downloads
 
-Downloads can be found on [Curseforge](https://www.curseforge.com/minecraft/mc-mods/xl-food-mod).
+Downloads can be found on [Curseforge](https://www.curseforge.com/minecraft/mc-mods/xl-food-mod-116+).
 
 ## Issues
 
-If you have found a bug, have a question or suggestion create an [issue](https://github.com/mariot7/XL-Food-Mod/issues/new/choose) and follow the provided guidelines!
+If you have found a bug, have a question or suggestion create an [issue](https://github.com/OneLemonyBoi/XL-Food-Mod/issues/new/choose) and follow the provided guidelines!
 
 ## Localization
 
@@ -35,7 +35,8 @@ When finished, fork this repository, commit new file and create a new pull reque
 ## Credits
 
 ### Developers
-* SoBiohazardous - Former Author
+* OneLemonyBoi - Current Author
+* SoBiohazardous and mariot7 - Former Authors
 * Igrek - Artist
 
 ### Translators
