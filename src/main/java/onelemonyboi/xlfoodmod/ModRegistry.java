@@ -16,8 +16,12 @@ public class ModRegistry {
 	@SubscribeEvent
 	public static void onBlockRegistry(RegistryEvent.Register<Block> event)
 	{
+		// New Items - Crops
+		event.getRegistry().register(BlockList.LEMON_PLANT);
+		event.getRegistry().register(BlockList.PINEAPPLE_PLANT);
+
+		// Old Items
 		event.getRegistry().register(BlockList.ROCK_SALT);
-		event.getRegistry().register(BlockList.GRASS);
 		event.getRegistry().register(BlockList.VANILLA_FLOWER);
 		event.getRegistry().register(BlockList.RICE_PLANT);
 		event.getRegistry().register(BlockList.PEPPER_PLANT);
@@ -39,8 +43,27 @@ public class ModRegistry {
 	@SubscribeEvent
 	public static void onItemRegistry(RegistryEvent.Register<Item> event)
 	{
+		// New Items - Items
+		event.getRegistry().register(ItemList.LEMON);
+		event.getRegistry().register(ItemList.LEMON_SEEDS);
+		event.getRegistry().register(ItemList.PINEAPPLE);
+		event.getRegistry().register(ItemList.PINEAPPLE_SEEDS);
+		event.getRegistry().register(ItemList.LEMON_JUICE);
+		event.getRegistry().register(ItemList.STRAWBERRY_JUICE);
+		event.getRegistry().register(ItemList.PINEAPPLE_JUICE);
+		event.getRegistry().register(ItemList.LEMON_SYRUP);
+		event.getRegistry().register(ItemList.STRAWBERRY_SYRUP);
+		event.getRegistry().register(ItemList.PINEAPPLE_SYRUP);
+		event.getRegistry().register(ItemList.LEMON_SLUSHIE);
+		event.getRegistry().register(ItemList.STRAWBERRY_SLUSHIE);
+		event.getRegistry().register(ItemList.PINEAPPLE_SLUSHIE);
+
+		// New Items - Crops
+		event.getRegistry().register(ItemList.LEMON_PLANT);
+		event.getRegistry().register(ItemList.PINEAPPLE_PLANT);
+
+		// Old Items
 		event.getRegistry().register(ItemList.ROCK_SALT);
-		event.getRegistry().register(ItemList.GRASS);
 		event.getRegistry().register(ItemList.VANILLA_FLOWER);
 		event.getRegistry().register(ItemList.CHOCOLATE_CAKE);
 		event.getRegistry().register(ItemList.CHOCOLATE_COOKIE_CAKE);

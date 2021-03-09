@@ -1,11 +1,12 @@
 package onelemonyboi.xlfoodmod.blocks;
 
+import net.minecraft.block.*;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.state.IntegerProperty;
+import net.minecraft.state.properties.BlockStateProperties;
 import onelemonyboi.xlfoodmod.XLFoodMod;
 import onelemonyboi.xlfoodmod.init.ItemList;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CropsBlock;
-import net.minecraft.block.FarmlandBlock;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IItemProvider;
@@ -16,7 +17,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class RicePlant extends CropsBlock {
-
+	public static final IntegerProperty AGE = BlockStateProperties.AGE_0_7;
     public RicePlant(String name)
     {
         super(Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP));

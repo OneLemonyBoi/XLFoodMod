@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "xlfoodmod:block/lemon_plant_stage1"
+    }
+}

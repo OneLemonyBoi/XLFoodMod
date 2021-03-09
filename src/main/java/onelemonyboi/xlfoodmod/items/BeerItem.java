@@ -17,6 +17,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.items.ItemHandlerHelper;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 
 public class BeerItem extends ItemFood {
 
@@ -43,5 +44,4 @@ public class BeerItem extends ItemFood {
 		super.addInformation(stack, worldIn, tooltip, flagIn);
 		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip").mergeStyle(TextFormatting.RED));
 	}
-
 }

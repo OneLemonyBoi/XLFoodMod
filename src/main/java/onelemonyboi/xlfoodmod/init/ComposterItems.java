@@ -6,7 +6,6 @@ public class ComposterItems {
 	
 	public static void register()
 	{
-		ComposterBlock.CHANCES.put(ItemList.GRASS, 0.3F);
 		ComposterBlock.CHANCES.put(ItemList.VANILLA_FLOWER, 0.3F);
 		ComposterBlock.CHANCES.put(ItemList.CHOCOLATE_CAKE, 1.0F);
 		ComposterBlock.CHANCES.put(ItemList.CHOCOLATE_COOKIE_CAKE, 1.0F);
@@ -33,6 +32,10 @@ public class ComposterItems {
 		ComposterBlock.CHANCES.put(ItemList.TOMATO, 0.65F);
 		ComposterBlock.CHANCES.put(ItemList.STRAWBERRY_SEEDS, 0.3F);
 		ComposterBlock.CHANCES.put(ItemList.STRAWBERRY, 0.65F);
+		ComposterBlock.CHANCES.put(ItemList.LEMON, 0.65F);
+		ComposterBlock.CHANCES.put(ItemList.LEMON_SEEDS, 0.3F);
+		ComposterBlock.CHANCES.put(ItemList.PINEAPPLE, 0.65F);
+		ComposterBlock.CHANCES.put(ItemList.PINEAPPLE_SEEDS, 0.3F);
 		
 		ComposterBlock.CHANCES.put(ItemList.CHEESY_BREAD, 0.85F);
 		ComposterBlock.CHANCES.put(ItemList.POTATO_BREAD, 0.85F);

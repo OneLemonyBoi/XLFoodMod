@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "xlfoodmod:pineapple_juice"
+    },
+    "result": "xlfoodmod:pineapple_syrup",
+    "experience": 0.35,
+    "cookingTime": 200
+}

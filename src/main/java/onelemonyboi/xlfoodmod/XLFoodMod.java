@@ -49,7 +49,6 @@ public class XLFoodMod {
 	private void doClientStuff(final FMLClientSetupEvent event)
 	{
         // do something that can only be done on the client
-		RenderTypeLookup.setRenderLayer(BlockList.GRASS, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockList.VANILLA_FLOWER, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockList.RICE_PLANT, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockList.PEPPER_PLANT, RenderType.getCutout());
@@ -59,6 +58,8 @@ public class XLFoodMod {
 		RenderTypeLookup.setRenderLayer(BlockList.ONION_PLANT, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockList.TOMATO_PLANT, RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockList.STRAWBERRY_PLANT, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockList.LEMON_PLANT, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockList.PINEAPPLE_PLANT, RenderType.getCutout());
 	}
 	
 	public static Logger getLogger()

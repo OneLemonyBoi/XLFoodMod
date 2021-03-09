@@ -1,0 +1,14 @@
+{  
+   "type":"crafting_shapeless",
+   "ingredients":[  
+      {  
+         "item":"xlfoodmod:lemon"
+      },
+      {  
+         "item":"minecraft:glass_bottle"
+      }
+   ],
+   "result":{  
+      "item":"xlfoodmod:lemon_juice"
+   }
+}

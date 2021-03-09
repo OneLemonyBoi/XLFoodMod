@@ -1,0 +1,17 @@
+{  
+   "type":"crafting_shapeless",
+   "ingredients":[  
+      {  
+         "item":"xlfoodmod:strawberry_syrup"
+      },
+      {  
+         "item":"minecraft:glass_bottle"
+      },
+      {
+         "item":"minecraft:snowball"
+      }
+   ],
+   "result":{  
+      "item":"xlfoodmod:strawberry_slushiee"
+   }
+}

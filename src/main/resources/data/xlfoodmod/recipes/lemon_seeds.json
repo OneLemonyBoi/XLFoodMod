@@ -1,0 +1,11 @@
+{  
+   "type":"crafting_shapeless",
+   "ingredients":[  
+      {  
+         "item":"xlfoodmod:lemon"
+      }
+   ],
+   "result":{  
+      "item":"xlfoodmod:lemon_seeds"
+   }
+}

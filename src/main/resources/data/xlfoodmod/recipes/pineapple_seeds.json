@@ -1,0 +1,11 @@
+{  
+   "type":"crafting_shapeless",
+   "ingredients":[  
+      {  
+         "item":"xlfoodmod:pineapple"
+      }
+   ],
+   "result":{  
+      "item":"xlfoodmod:pineapple_seeds"
+   }
+}

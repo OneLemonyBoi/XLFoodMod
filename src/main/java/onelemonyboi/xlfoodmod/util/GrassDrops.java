@@ -24,7 +24,7 @@ public class GrassDrops {
     public static void onBlock(BlockEvent.BreakEvent event) {
         Block blockIn = event.getWorld().getBlockState(event.getPos()).getBlock();
         if (blockIn == Blocks.GRASS) {
-            int randomNum = ThreadLocalRandom.current().nextInt(1, 41);
+            int randomNum = ThreadLocalRandom.current().nextInt(1, 101);
             if (Configs.enable_grass.get()) {
                 if (randomNum == 1) {
                     empty(event.getPlayer().world, event.getPos(), ItemList.CORN_SEEDS);
@@ -49,6 +49,12 @@ public class GrassDrops {
                 }
                 if (randomNum == 8) {
                     empty(event.getPlayer().world, event.getPos(), ItemList.TOMATO_SEEDS);
+                }
+                if (randomNum == 9) {
+                    empty(event.getPlayer().world, event.getPos(), ItemList.LEMON_SEEDS);
+                }
+                if (randomNum == 10) {
+                    empty(event.getPlayer().world, event.getPos(), ItemList.PINEAPPLE_SEEDS);
                 }
             }
             if (Configs.enable_vanilla.get()) {

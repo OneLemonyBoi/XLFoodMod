@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "xlfoodmod:lemon_juice"
+    },
+    "result": "xlfoodmod:lemon_syrup",
+    "experience": 0.35,
+    "cookingTime": 200
+}
