@@ -153,6 +153,23 @@
     "item.xlfoodmod.coffee_cup": "Tasse de café",
     "item.xlfoodmod.coffee": "Café",
     "item.xlfoodmod.cappuccino": "Cappuccino",
+    
+    //UPDATE FOR PINEAPPLE SEED AND LEMON ETC (Last update September 1, 2021)
+    "item.xlfoodmod.lemon_seeds": "Graine de Citron",
+    "item.xlfoodmod.pineapple_seeds": "Graines d'ananas",
+    "item.xlfoodmod.lemon": "Citron",
+    "item.xlfoodmod.pineapple": "Ananas",
+    "block.xlfoodmod.lemon_plant": "Plante de Citron",
+    "block.xlfoodmod.pineapple_plant": "Plante d'ananas",
+    "item.xlfoodmod.lemon_juice": "Limonade",
+    "item.xlfoodmod.strawberry_juice": "Jus de Fraise",
+    "item.xlfoodmod.pineapple_juice": "Jus d'ananas",
+    "item.xlfoodmod.lemon_syrup": "Sirop de Citron",
+    "item.xlfoodmod.strawberry_syrup": "Sirop de Fraise",
+    "item.xlfoodmod.pineapple_syrup": "Sirop d'ananas",
+    "item.xlfoodmod.lemon_slushie": "Slushie à la Limonade",
+    "item.xlfoodmod.strawberry_slushie": "Slushie à la Fraise",
+    "item.xlfoodmod.pineapple_slushie": "Slushie à l'ananas",
 
     "item.xlfoodmod.beer.tooltip": "Nausée II (0:05)",
     "item.xlfoodmod.speedy_energy_drink.tooltip": "Rapidité",
