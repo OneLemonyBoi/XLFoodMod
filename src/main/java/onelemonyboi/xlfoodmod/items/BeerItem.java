@@ -1,9 +1,5 @@
 package onelemonyboi.xlfoodmod.items;
 
-import java.util.List;
-
-import onelemonyboi.xlfoodmod.init.ItemFood;
-import onelemonyboi.xlfoodmod.init.ItemList;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,7 +13,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import onelemonyboi.xlfoodmod.init.ItemFood;
+import onelemonyboi.xlfoodmod.init.ItemList;
+
+import java.util.List;
 
 public class BeerItem extends ItemFood {
 
@@ -27,21 +26,21 @@ public class BeerItem extends ItemFood {
     }
 	
 	@Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving)
+    public ItemStack finishUsingItem(ItemStack stack, World worldIn, LivingEntity entityLiving)
 	{
         if(entityLiving instanceof PlayerEntity)
         {
         	PlayerEntity player = (PlayerEntity) entityLiving;
-        	entityLiving.addPotionEffect(new EffectInstance(Effects.NAUSEA, 100, 1, false, true));
+        	entityLiving.addEffect(new EffectInstance(Effects.CONFUSION, 100, 1, false, true));
             ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(ItemList.GLASS_MUG));
         }
-        return super.onItemUseFinish(stack, worldIn, entityLiving);
+        return super.finishUsingItem(stack, worldIn, entityLiving);
     }
 	
     @OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip").mergeStyle(TextFormatting.RED));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip").withStyle(TextFormatting.RED));
 	}
 }

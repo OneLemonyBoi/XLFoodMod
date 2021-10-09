@@ -1,27 +1,27 @@
 package onelemonyboi.xlfoodmod.blocks;
 
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.properties.BlockStateProperties;
-import onelemonyboi.xlfoodmod.XLFoodMod;
-import onelemonyboi.xlfoodmod.init.ItemList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropsBlock;
 import net.minecraft.block.FarmlandBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
+import net.minecraft.state.IntegerProperty;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import onelemonyboi.xlfoodmod.XLFoodMod;
+import onelemonyboi.xlfoodmod.init.ItemList;
 
 public class LemonPlant extends CropsBlock {
-    public static final IntegerProperty AGE = BlockStateProperties.AGE_0_7;
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
     public LemonPlant(String name)
     {
-        super(Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP));
+        super(Properties.of(Material.PLANT).noCollission().randomTicks().sound(SoundType.CROP));
         this.setRegistryName(new ResourceLocation(XLFoodMod.MOD_ID, name));
     }
 

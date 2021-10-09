@@ -18,10 +18,10 @@ import onelemonyboi.xlfoodmod.XLFoodMod;
 import onelemonyboi.xlfoodmod.init.ItemList;
 
 public class PineapplePlant extends CropsBlock {
-    public static final IntegerProperty AGE = BlockStateProperties.AGE_0_7;
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
     public PineapplePlant(String name)
     {
-        super(Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP));
+        super(Properties.of(Material.PLANT).noCollission().randomTicks().sound(SoundType.CROP));
         this.setRegistryName(new ResourceLocation(XLFoodMod.MOD_ID, name));
     }
 
