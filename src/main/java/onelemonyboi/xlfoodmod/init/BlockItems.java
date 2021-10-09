@@ -1,9 +1,10 @@
 package onelemonyboi.xlfoodmod.init;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.block.Block;
 import onelemonyboi.xlfoodmod.CreativeTab;
 
-public class BlockItems extends net.minecraft.item.BlockItem {
+public class BlockItems extends BlockItem {
 	
 	public BlockItems(Block blockIn)
 	{

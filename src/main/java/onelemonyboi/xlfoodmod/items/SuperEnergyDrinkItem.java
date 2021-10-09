@@ -1,15 +1,15 @@
 package onelemonyboi.xlfoodmod.items;
 
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.items.ItemHandlerHelper;
@@ -26,36 +26,34 @@ public class SuperEnergyDrinkItem extends ItemFood {
     }
 	
 	@Override
-    public ItemStack finishUsingItem(ItemStack stack, World worldIn, LivingEntity entityLiving)
+    public ItemStack finishUsingItem(ItemStack stack, Level worldIn, LivingEntity entityLiving)
 	{
-        if(entityLiving instanceof PlayerEntity)
+        if(entityLiving instanceof Player player)
         {
-        	PlayerEntity player = (PlayerEntity) entityLiving;
-        	entityLiving.addEffect(new EffectInstance(Effects.NIGHT_VISION, 3600, 2, false, false));
-        	entityLiving.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 3600, 0, false, false));
-        	entityLiving.addEffect(new EffectInstance(Effects.DIG_SPEED, 3600, 0, false, false));
-        	entityLiving.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 3600, 2, false, false));
-        	entityLiving.addEffect(new EffectInstance(Effects.JUMP, 3600, 0, false, false));
-        	entityLiving.addEffect(new EffectInstance(Effects.REGENERATION, 3600, 1, false, false));
-        	entityLiving.addEffect(new EffectInstance(Effects.WATER_BREATHING, 3600, 1, false, false));
-        	entityLiving.addEffect(new EffectInstance(Effects.INVISIBILITY, 3600, 2, false, false));
+			entityLiving.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 3600, 2, false, false));
+        	entityLiving.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3600, 0, false, false));
+        	entityLiving.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 3600, 0, false, false));
+        	entityLiving.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3600, 2, false, false));
+        	entityLiving.addEffect(new MobEffectInstance(MobEffects.JUMP, 3600, 0, false, false));
+        	entityLiving.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 3600, 1, false, false));
+        	entityLiving.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 3600, 1, false, false));
+        	entityLiving.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 3600, 2, false, false));
             ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(ItemList.EMPTY_CAN));
         }
         return super.finishUsingItem(stack, worldIn, entityLiving);
     }
-	
+
 	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip").withStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip2").withStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip3").withStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip4").withStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip5").withStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip6").withStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip7").withStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip8").withStyle(TextFormatting.BLUE));
+		tooltip.add(new TranslatableComponent(this.getDescriptionId() + ".tooltip").withStyle(ChatFormatting.BLUE));
+		tooltip.add(new TranslatableComponent(this.getDescriptionId() + ".tooltip2").withStyle(ChatFormatting.BLUE));
+		tooltip.add(new TranslatableComponent(this.getDescriptionId() + ".tooltip3").withStyle(ChatFormatting.BLUE));
+		tooltip.add(new TranslatableComponent(this.getDescriptionId() + ".tooltip4").withStyle(ChatFormatting.BLUE));
+		tooltip.add(new TranslatableComponent(this.getDescriptionId() + ".tooltip5").withStyle(ChatFormatting.BLUE));
+		tooltip.add(new TranslatableComponent(this.getDescriptionId() + ".tooltip6").withStyle(ChatFormatting.BLUE));
+		tooltip.add(new TranslatableComponent(this.getDescriptionId() + ".tooltip7").withStyle(ChatFormatting.BLUE));
+		tooltip.add(new TranslatableComponent(this.getDescriptionId() + ".tooltip8").withStyle(ChatFormatting.BLUE));
 	}
-
 }

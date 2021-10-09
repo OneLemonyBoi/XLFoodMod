@@ -1,6 +1,6 @@
 package onelemonyboi.xlfoodmod.init;
 
-import net.minecraft.block.ComposterBlock;
+import net.minecraft.world.level.block.ComposterBlock;
 
 public class ComposterItems {
 	public static void register() {

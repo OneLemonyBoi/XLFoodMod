@@ -1,15 +1,15 @@
 package onelemonyboi.xlfoodmod.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.IWorldReader;
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.material.Material;
 import onelemonyboi.xlfoodmod.XLFoodMod;
 
 public class RockSaltBlock extends Block {
@@ -21,7 +21,7 @@ public class RockSaltBlock extends Block {
 	}
 
 	@Override
-	public int getExpDrop(BlockState state, IWorldReader world, BlockPos pos, int fortune, int silktouch) {
-		return MathHelper.nextInt(RANDOM, 0, 2);
+	public int getExpDrop(BlockState state, LevelReader world, BlockPos pos, int fortune, int silktouch) {
+		return Mth.nextInt(RANDOM, 0, 2);
 	}
 }

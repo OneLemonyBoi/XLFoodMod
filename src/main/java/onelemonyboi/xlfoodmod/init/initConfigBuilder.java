@@ -1,9 +1,7 @@
 package onelemonyboi.xlfoodmod.init;
 
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber
 public class initConfigBuilder {
     public final ForgeConfigSpec COMMON;
 

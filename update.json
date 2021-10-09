@@ -6,7 +6,9 @@
       "1.15.2-latest":"2.2.2",
       "1.15.2-recommended":"2.2.2",
       "1.16.5-latest":"1.2.2",
-      "1.16.5-recommended":"1.2.2"
+      "1.16.5-recommended":"1.2.2",
+      "1.17.1-latest":"1.2.2",
+      "1.17.1-recommended":"1.2.2"
    },
    "1.15.1":{
       "2.2.1":"Added Smoker recipe for Salt, added Dutch translation, bug fixes."
@@ -16,5 +18,8 @@
    },
    "1.16.5":{
       "1.2.2":"Official Mappings. Forge 36.2.8"
+   },
+   "1.17.1":{
+      "1.2.2":"Official Mappings. Forge 37.0.73. MC 1.17.1"
    }
 }

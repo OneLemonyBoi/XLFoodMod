@@ -1,6 +1,6 @@
 package onelemonyboi.xlfoodmod.init;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 import onelemonyboi.xlfoodmod.blocks.*;
 
 public class BlockList {

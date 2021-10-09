@@ -1,12 +1,12 @@
 package onelemonyboi.xlfoodmod.util;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -24,45 +24,16 @@ public class GrassDrops {
 
             if (XLFoodMod.CONFIGURATION.enableGrass.get()) {
                 switch (randomNum) {
-                    case 1:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.CORN_SEEDS);
-                        break;
-
-                    case 2:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.ONION);
-                        break;
-
-                    case 3:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.RICE);
-                        break;
-
-                    case 4:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.STRAWBERRY_SEEDS);
-                        break;
-
-                    case 5:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.CUCUMBER_SEEDS);
-                        break;
-
-                    case 6:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.LETTUCE_SEEDS);
-                        break;
-
-                    case 7:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.PEPPER_SEEDS);
-                        break;
-
-                    case 8:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.TOMATO_SEEDS);
-                        break;
-
-                    case 9:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.LEMON_SEEDS);
-                        break;
-
-                    case 10:
-                        empty(event.getPlayer().level, event.getPos(), ItemList.PINEAPPLE_SEEDS);
-                        break;
+                    case 1 -> empty(event.getPlayer().level, event.getPos(), ItemList.CORN_SEEDS);
+                    case 2 -> empty(event.getPlayer().level, event.getPos(), ItemList.ONION);
+                    case 3 -> empty(event.getPlayer().level, event.getPos(), ItemList.RICE);
+                    case 4 -> empty(event.getPlayer().level, event.getPos(), ItemList.STRAWBERRY_SEEDS);
+                    case 5 -> empty(event.getPlayer().level, event.getPos(), ItemList.CUCUMBER_SEEDS);
+                    case 6 -> empty(event.getPlayer().level, event.getPos(), ItemList.LETTUCE_SEEDS);
+                    case 7 -> empty(event.getPlayer().level, event.getPos(), ItemList.PEPPER_SEEDS);
+                    case 8 -> empty(event.getPlayer().level, event.getPos(), ItemList.TOMATO_SEEDS);
+                    case 9 -> empty(event.getPlayer().level, event.getPos(), ItemList.LEMON_SEEDS);
+                    case 10 -> empty(event.getPlayer().level, event.getPos(), ItemList.PINEAPPLE_SEEDS);
                 }
             }
 
@@ -72,7 +43,7 @@ public class GrassDrops {
         }
     }
 
-    public static void empty(World world, BlockPos pos, Item item) {
+    public static void empty(Level world, BlockPos pos, Item item) {
         if (!world.isClientSide) {
             float f = 0.7F;
             double d0 = (double) (world.random.nextFloat() * f) + (double) 0.15F;

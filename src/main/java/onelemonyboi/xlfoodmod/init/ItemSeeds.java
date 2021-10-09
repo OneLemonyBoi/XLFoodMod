@@ -1,11 +1,11 @@
 package onelemonyboi.xlfoodmod.init;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockNamedItem;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.level.block.Block;
 import onelemonyboi.xlfoodmod.XLFoodMod;
 
-public class ItemSeeds extends BlockNamedItem {
+public class ItemSeeds extends ItemNameBlockItem {
 	
 	public ItemSeeds(String name, Block crop)
 	{

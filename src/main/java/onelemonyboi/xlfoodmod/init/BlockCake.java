@@ -1,9 +1,9 @@
 package onelemonyboi.xlfoodmod.init;
 
-import net.minecraft.block.CakeBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.CakeBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
 import onelemonyboi.xlfoodmod.XLFoodMod;
 
 public class BlockCake extends CakeBlock {

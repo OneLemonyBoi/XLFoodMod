@@ -1,7 +1,7 @@
 package onelemonyboi.xlfoodmod;
 
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -40,16 +40,16 @@ public class XLFoodMod {
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
-		RenderTypeLookup.setRenderLayer(BlockList.VANILLA_FLOWER, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.RICE_PLANT, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.PEPPER_PLANT, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.CORN_PLANT, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.CUCUMBER_PLANT, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.LETTUCE_PLANT, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.ONION_PLANT, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.TOMATO_PLANT, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.STRAWBERRY_PLANT, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.LEMON_PLANT, RenderType.cutout());
-		RenderTypeLookup.setRenderLayer(BlockList.PINEAPPLE_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.VANILLA_FLOWER, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.RICE_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.PEPPER_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.CORN_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.CUCUMBER_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.LETTUCE_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.ONION_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.TOMATO_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.STRAWBERRY_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.LEMON_PLANT, RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockList.PINEAPPLE_PLANT, RenderType.cutout());
 	}
 }
