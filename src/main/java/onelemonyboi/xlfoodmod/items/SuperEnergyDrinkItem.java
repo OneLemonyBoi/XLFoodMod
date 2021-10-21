@@ -1,9 +1,5 @@
 package onelemonyboi.xlfoodmod.items;
 
-import java.util.List;
-
-import onelemonyboi.xlfoodmod.init.ItemFood;
-import onelemonyboi.xlfoodmod.init.ItemList;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,6 +13,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.items.ItemHandlerHelper;
+import onelemonyboi.xlfoodmod.init.ItemFood;
+import onelemonyboi.xlfoodmod.init.ItemList;
+
+import java.util.List;
 
 public class SuperEnergyDrinkItem extends ItemFood {
 
@@ -26,36 +26,36 @@ public class SuperEnergyDrinkItem extends ItemFood {
     }
 	
 	@Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving)
+    public ItemStack finishUsingItem(ItemStack stack, World worldIn, LivingEntity entityLiving)
 	{
         if(entityLiving instanceof PlayerEntity)
         {
         	PlayerEntity player = (PlayerEntity) entityLiving;
-        	entityLiving.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, 3600, 2, false, false));
-        	entityLiving.addPotionEffect(new EffectInstance(Effects.SPEED, 3600, 0, false, false));
-        	entityLiving.addPotionEffect(new EffectInstance(Effects.HASTE, 3600, 0, false, false));
-        	entityLiving.addPotionEffect(new EffectInstance(Effects.STRENGTH, 3600, 2, false, false));
-        	entityLiving.addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 3600, 0, false, false));
-        	entityLiving.addPotionEffect(new EffectInstance(Effects.REGENERATION, 3600, 1, false, false));
-        	entityLiving.addPotionEffect(new EffectInstance(Effects.WATER_BREATHING, 3600, 1, false, false));
-        	entityLiving.addPotionEffect(new EffectInstance(Effects.INVISIBILITY, 3600, 2, false, false));
+        	entityLiving.addEffect(new EffectInstance(Effects.NIGHT_VISION, 3600, 2, false, false));
+        	entityLiving.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, 3600, 0, false, false));
+        	entityLiving.addEffect(new EffectInstance(Effects.DIG_SPEED, 3600, 0, false, false));
+        	entityLiving.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 3600, 2, false, false));
+        	entityLiving.addEffect(new EffectInstance(Effects.JUMP, 3600, 0, false, false));
+        	entityLiving.addEffect(new EffectInstance(Effects.REGENERATION, 3600, 1, false, false));
+        	entityLiving.addEffect(new EffectInstance(Effects.WATER_BREATHING, 3600, 1, false, false));
+        	entityLiving.addEffect(new EffectInstance(Effects.INVISIBILITY, 3600, 2, false, false));
             ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(ItemList.EMPTY_CAN));
         }
-        return super.onItemUseFinish(stack, worldIn, entityLiving);
+        return super.finishUsingItem(stack, worldIn, entityLiving);
     }
 	
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip").mergeStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip2").mergeStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip3").mergeStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip4").mergeStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip5").mergeStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip6").mergeStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip7").mergeStyle(TextFormatting.BLUE));
-		tooltip.add(new TranslationTextComponent(this.getTranslationKey() + ".tooltip8").mergeStyle(TextFormatting.BLUE));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip").withStyle(TextFormatting.BLUE));
+		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip2").withStyle(TextFormatting.BLUE));
+		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip3").withStyle(TextFormatting.BLUE));
+		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip4").withStyle(TextFormatting.BLUE));
+		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip5").withStyle(TextFormatting.BLUE));
+		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip6").withStyle(TextFormatting.BLUE));
+		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip7").withStyle(TextFormatting.BLUE));
+		tooltip.add(new TranslationTextComponent(this.getDescriptionId() + ".tooltip8").withStyle(TextFormatting.BLUE));
 	}
 
 }
