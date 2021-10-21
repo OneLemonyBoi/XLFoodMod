@@ -1,19 +1,19 @@
 package onelemonyboi.xlfoodmod.blocks;
 
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BushBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.material.Material;
 import onelemonyboi.xlfoodmod.XLFoodMod;
-import net.minecraft.block.Block;
-import net.minecraft.block.BushBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.util.ResourceLocation;
 
 public class VanillaFlowerBlock extends BushBlock {
-	public static final IntegerProperty AGE = BlockStateProperties.AGE_0_7;
+	public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
 	public VanillaFlowerBlock(String name)
 	{
-		super(Properties.create(Material.PLANTS).hardnessAndResistance(0.0F).doesNotBlockMovement().sound(SoundType.PLANT));
+		super(Properties.of(Material.PLANT).noCollission().randomTicks().sound(SoundType.CROP));
 		this.setRegistryName(new ResourceLocation(XLFoodMod.MOD_ID, name));
 	}
 	
@@ -21,5 +21,4 @@ public class VanillaFlowerBlock extends BushBlock {
 	{
 		return Block.OffsetType.XZ;
 	}
-
 }

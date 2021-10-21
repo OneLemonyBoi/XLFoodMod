@@ -1,10 +1,10 @@
 package onelemonyboi.xlfoodmod;
 
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import onelemonyboi.xlfoodmod.init.ItemList;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 
-public class CreativeTab extends ItemGroup {
+public class CreativeTab extends CreativeModeTab {
 	
 	private static final CreativeTab INSTANCE = new CreativeTab();
 
@@ -18,7 +18,7 @@ public class CreativeTab extends ItemGroup {
         return INSTANCE;
     }
     
-    public ItemStack createIcon()
+    public ItemStack makeIcon()
     {
     	return new ItemStack(ItemList.PEPPER);
     }

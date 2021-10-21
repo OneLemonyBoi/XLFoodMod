@@ -1,13 +1,13 @@
 package onelemonyboi.xlfoodmod.items;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import onelemonyboi.xlfoodmod.init.ItemFood;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.items.ItemHandlerHelper;
+import onelemonyboi.xlfoodmod.init.ItemFood;
 
 public class JuiceItem extends ItemFood {
 
@@ -17,13 +17,12 @@ public class JuiceItem extends ItemFood {
     }
 
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving)
+    public ItemStack finishUsingItem(ItemStack stack, Level worldIn, LivingEntity entityLiving)
     {
-        if(entityLiving instanceof PlayerEntity)
+        if(entityLiving instanceof Player player)
         {
-            PlayerEntity player = (PlayerEntity) entityLiving;
             ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(Items.GLASS_BOTTLE));
         }
-        return super.onItemUseFinish(stack, worldIn, entityLiving);
+        return super.finishUsingItem(stack, worldIn, entityLiving);
     }
 }

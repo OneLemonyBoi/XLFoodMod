@@ -1,10 +1,11 @@
 modLoader="javafml" #mandatory
-loaderVersion="[35,)" #mandatory (30 is current forge version)
+loaderVersion="[37,)"
 issueTrackerURL="https://github.com/OneLemonyBoi/XLFoodMod/issues" #optional
 license = "GNU"
+
 [[mods]] #mandatory
 modId="xlfoodmod" #mandatory
-version="${file.jarVersion}" #mandatory
+version="1.17.1-1.2.2" #must update manually
 displayName="XL Food Mod" #mandatory
 displayURL="https://www.curseforge.com/minecraft/mc-mods/xl-food-mod-plus" #optional
 logoFile="" #optional
@@ -12,17 +13,3 @@ authors="OneLemonyBoi" #optional
 description='''
 A mod that adds more foods and crops to the game.
 '''
-# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.xlfoodmod]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="[35,)" #mandatory
-    ordering="NONE"
-    side="BOTH"
-# Here's another dependency
-[[dependencies.xlfoodmod]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.16.4, 1.16.5]"
-    ordering="NONE"
-    side="BOTH"
