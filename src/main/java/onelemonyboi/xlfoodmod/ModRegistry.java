@@ -2,8 +2,8 @@ package onelemonyboi.xlfoodmod;
 
 import onelemonyboi.xlfoodmod.init.BlockList;
 import onelemonyboi.xlfoodmod.init.ItemList;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;

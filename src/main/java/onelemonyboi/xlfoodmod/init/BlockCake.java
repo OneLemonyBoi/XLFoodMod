@@ -1,16 +1,16 @@
 package onelemonyboi.xlfoodmod.init;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.CakeBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
 import onelemonyboi.xlfoodmod.XLFoodMod;
-import net.minecraft.block.CakeBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.util.ResourceLocation;
 
 public class BlockCake extends CakeBlock {
 
 	public BlockCake(String name, int foodlevel, float saturation)
 	{
-		super(Properties.create(Material.CAKE).hardnessAndResistance(0.5F).sound(SoundType.CLOTH));
+		super(Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL));
 		this.setRegistryName(new ResourceLocation(XLFoodMod.MOD_ID, name));
 	}
 
